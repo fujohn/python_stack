@@ -36,8 +36,7 @@ class BankAccount:
     @classmethod
     def display_all_balances(cls):
         for account in cls.all_accounts:
-            print(account.int_rate)
-            print(account.balance)
+            account.display_account_info()
 
 test_1 = BankAccount()
 test_2 = BankAccount(0.02, 0)
