@@ -274,3 +274,7 @@ resume_data = {
     #                0              1
     "hobbies":["rock climbing", "knitting"]
 }
+
+x = ['a','b','c']
+x.remove('b')
+print(x)
