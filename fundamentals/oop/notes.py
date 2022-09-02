@@ -160,3 +160,67 @@ kevin = {"name": "Kevin Durant", "age":34, "position": "small forward", "team": 
 player_kevin = Player(kevin["name"], kevin["age"], kevin["position"], kevin["team"])
 print(player_kevin.position) # prints small forward
 
+#################################################
+# Inheritance
+
+class CheckingAccount(BankAccount): # BankAccount is the parent class
+    pass     # 100% of BankAccount attributes and methods copied to CheckingAccount
+
+class RetirementAccount(BankAccount):
+    def __init__(self, int_rate, is_roth, balance=0):
+        super().__init__(int_rate, balance)	# take the methods from parent's init for int_rate and balance
+        self.is_roth = is_roth	
+
+# If bank account has method like this
+class BankAccount:
+    def withdraw(self, amount):
+        if (self.balance - amount) > 0:
+            self.balance -= amount
+        else:
+            print("INSUFFICIENT FUNDS")
+        return self
+
+# inheriting this will and adding is_early logic will look like this
+class RetirementAccount(BankAccount):
+    def withdraw(self, amount, is_early):
+        if is_early:
+    	    amount = amount * 1.10
+        super().withdraw(amount)
+        return self
+        
+#################################################
+# Modules & Packages
+
+# import the library
+import urllib.request
+response = urllib.request.urlopen("http://www.codingdojo.com")
+html = response.read()
+print(html)
+
+from my_package.subdirectory import my_functions # package = collections of modules
+
+# directory where my_module is the package
+sample_project
+     |_____ python_file.py
+     |_____ my_modules
+               |_____ __init__.py
+               |_____ test_module.py
+               |_____ another_module.py
+               |_____ third_module.py
+
+# if importing test_module from python_file.py
+import my_modules.test_module # OR
+from my_modules import test_module
+
+# __init__.py required for Python 2.7
+# to restrict importing of packages, do this
+__all__ = ["test_module"] # would only allow test_module to be imported
+
+
+
+
+
+
+
+
+
