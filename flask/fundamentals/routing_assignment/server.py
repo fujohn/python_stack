@@ -12,11 +12,16 @@ def dojo():
 
 @app.route('/say/<string:name>')
 def say_hi(name):
-    return f'Hi {name}!'
+    return f'Hi {name.capitalize()}!'
 
 @app.route('/repeat/<int:num>/<string:word>')
 def repeat(num, word):
-    return f'{word * num}'
+    output = ''
+
+    for i in range(num):
+        output += f"<p>{word}</p>"
+
+    return output
 
 
 if __name__=="__main__":   # Ensure this file is being run directly and not from a different module    
