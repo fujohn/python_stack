@@ -41,15 +41,15 @@
                     <tbody>
                     <tr>
                         <td>Strawberry</td>
-                        <td>4</td>
+                        <td>{{ request.form['strawberry'] }}</td>
                     </tr>
                     <tr>
                         <td>Raspberry</td>
-                        <td>3</td>
+                        <td>{{ request.form['raspberry'] }}</td>
                     </tr>
                     <tr>
                         <td>Apple</td>
-                        <td>2</td>
+                        <td>{{ request.form['apple'] }}</td>
                     </tr>
                     </tbody>
                 </table>
@@ -57,15 +57,15 @@
                 <h4 class="mb-3">Your Information</h4>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        First Name: Michael
+                        First Name: {{ request.form['first_name'] }}
                     </div>
                     <div class="col-md-6 mb-3">
-                        Last Name: Choi
+                        Last Name: {{ request.form['last_name'] }}
                     </div>
                 </div>
   
                 <div class="mb-3">
-                    Your Student ID: 123-456-7890
+                    Your Student ID: {{ request.form['student_id'] }}
                 </div>
               
                 <hr class="mb-4">
