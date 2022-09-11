@@ -9,3 +9,4 @@ def varargs(arg1, *args):
         print(a)
 varargs("one", "two", "three") # output: two, three (on separate lines)
 
+
