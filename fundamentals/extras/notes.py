@@ -10,3 +10,16 @@ def varargs(arg1, *args):
 varargs("one", "two", "three") # output: two, three (on separate lines)
 
 
+###########################################
+# Linked Lists
+class SLNode:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+class SList:
+    def __init__(self):
+        self.head = None
+
+my_list = SList()
+
