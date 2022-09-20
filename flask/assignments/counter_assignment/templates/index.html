@@ -9,21 +9,25 @@
     <title>Counter</title>
 </head>
 <body>
-    <h1>Counter</h1>
-    <h3>{{ session['counter'] }}</h3>
-    <div>
-        <form action="/increase_counter" method="post">
+    <h1 class="bg-primary text-light text-center col-3 my-5 mx-auto">Counter</h1>
+    <h3 class="text-center col-3 my-5 mx-auto">Sight visited {{ session['visited'] }} time(s)</h3>
+    <h3 class="text-center col-3 my-5 mx-auto">Counter increased to {{ session['counter'] }}</h3>
+    <div class="col-3 flex justify-around mx-auto">
+        <form action="/increase_counter" method="post" class="btn btn-primary">
             <button>Add 1</button>
         </form>
-        <form action="/increase_counter_2" method="post">
+
+        <form action="/increase_counter_2" method="post" class="btn btn-primary">
             <button>Add 2</button>
         </form>
-        <form action="/increase_counter_custom" method="post">
+
+        <form action="/increase_counter_custom" method="post" class="flex justify-around mx-auto">
             <label for='custom_increment'>Amount to Add:</label>
             <input type='text' name='custom_increment'>
             <button>Add Amount</button>
         </form>
-        <form action="/destroy_session" method="post">
+
+        <form action="/destroy_session" method="post" class="btn btn-danger">
             <button>Reset</button>
         </form>
     </div>
