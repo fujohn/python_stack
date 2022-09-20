@@ -23,6 +23,13 @@ def increase_counter_2():
     session['counter'] += 2
     return redirect("/")	 
 
+@app.route('/increase_counter_custom', methods=['POST'])
+def increase_counter_custom():
+    print(request.form)
+    session['amount'] = int(request.form['custom_increment'])
+    session['counter'] += session['amount']
+    return redirect("/")	 
+
 @app.route('/destroy_session', methods=['POST'])
 def destroy_session():
     # session.clear()		# clears all keys
