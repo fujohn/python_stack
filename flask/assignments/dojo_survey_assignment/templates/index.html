@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <main class="col-4 offset-md-4 my-5 mx-auto text-light bg-dark p-5">
+        <h1 class="text-start text-warning">Dojo Survey</h1>
+        <form action="/submit_survey" method="post" class="d-flex flex-column">
+            <label for="name" class="text-start my-2">Name:</label>
+            <input type="text" name="name">
+            <label for="location" class="text-start my-2">Dojo Location:</label>
+            <select name="location">
+                <option value="Unselected">-- Select A Location --</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Seattle">Seattle</option>
+                <option value="Burbank">Burbank</option>
+                <option value="Online">Online</option>
+                <option value="San Jose">San Jose</option>
+            </select>
+            <label for="language" class="text-start my-2">Favorite Language:</label>
+            <div class="multi">
+                <div>
+                    <input type="radio" name="language" value="Python">
+                    <label for="Python">Python</label>
+                </div>
+                <div>
+                    <input type="radio" name="language" value="CSS">
+                    <label for="CSS">CSS</label>
+                </div>
+                <div>
+                    <input type="radio" name="language" value="JavaScript">
+                    <label for="JavaScript">JavaScript</label>
+                </div>
+                <div>
+                    <input type="radio" name="language" value="HTML">
+                    <label for="HTML">HTML</label>
+                </div>
+                <div>
+                    <input type="radio" name="language" value="Java">
+                    <label for="Java">Java</label>
+                </div>
+            </div>
+            <label for="ends" class="text-start my-2">What do you like most about software development?</label>
+            <div class="multi">
+                <div>
+                    <input type="checkbox" name="front_end" value="Front-End">
+                    <label for="Python">Front-End</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="back_end" value="Back-End">
+                    <label for="CSS">Back-End</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="database" value="Database">
+                    <label for="JavaScript">Database</label>
+                </div>
+            </div>
+            <label for="comments" class="text-start my-2">Comments:</label>
+            <textarea name="comments" id="" cols="30" rows="10"></textarea>
+            <button class="text-center">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
