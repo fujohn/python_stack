@@ -38,6 +38,16 @@ def show_user():
 # def show_user():
 #     return render_template('show.html')
 
+@app.route('/process', methods=['POST'])
+def process():
+    if request.form['which_form'] == 'register':
+        print('REGISTERING')
+        print(request.form)
+    elif request.form['which_form'] == 'login':
+        print('LOGGING IN')
+        print(request.form)
+    return redirect('/')
+
 
 if __name__ == "__main__":
     app.run(debug=True)
