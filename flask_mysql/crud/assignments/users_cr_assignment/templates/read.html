@@ -30,7 +30,7 @@
                 <td>{{ one_user.email }}</td>
                 <td>{{ one_user.created_at }}</td>
                 <td>{{ one_user.updated_at }}</td>
-                <td><a href={{ "/show/"+ one_user.id|string }}>Show</a> | <a href="/edit">Edit</a> | <a href="/delete">Delete</a></td>
+                <td><a href={{ "/show/"+ one_user.id|string }}>Show</a> | <a href={{ "/edit/"+ one_user.id|string }}>Edit</a> | <a href={{ "/delete/"+ one_user.id|string }}>Delete</a></td>
             </tr>
             {% endfor %}
         </tbody>

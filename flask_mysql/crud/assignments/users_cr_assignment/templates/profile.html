@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- linking a css style sheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='profile.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read {{ user.first_name }} {{ user.last_name }}</title>
 </head>
@@ -21,7 +23,7 @@
         <p>Last Updated On: {{ user.updated_at }}</p>
     </main>
     <footer>
-        <p><a href="/edit">Edit</a> | <a href="/delete">Delete</a></p>
+        <p><a href={{ "/edit/"+ user.id|string }}>Edit</a> | <a href={{ "/delete/"+ user.id|string }}>Delete</a></p>
     </footer>
 </body>
 </html>

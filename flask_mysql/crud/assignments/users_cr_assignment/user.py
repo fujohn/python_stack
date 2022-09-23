@@ -33,6 +33,21 @@ class User:
         return connectToMySQL('users_schema').query_db( query, data )
 
     @classmethod
+    def show_newest(cls):
+        query = 'SELECT MAX(id) FROM users'
+        return connectToMySQL('users_schema').query_db(query)
+
+    @classmethod
     def retrieve_user(cls, data):
         query = "SELECT * FROM users WHERE id=%(id)s"
+        return connectToMySQL('users_schema').query_db( query, data )
+
+    @classmethod
+    def edit_user(cls, data):
+        query = 'UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s, updated_at = NOW() WHERE id = %(id)s'
+        return connectToMySQL('users_schema').query_db( query, data )
+
+    @classmethod
+    def delete_user(cls, data):
+        query = "DELETE FROM users WHERE id=%(id)s"
         return connectToMySQL('users_schema').query_db( query, data )
