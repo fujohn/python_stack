@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect # added request, redirect for second part
 app = Flask(__name__)
+
 # our index route will handle rendering our form
 @app.route('/')
 def index():
@@ -18,7 +19,7 @@ def create_user():
 def show_user():
     print("Showing the User Info From the Form")
     print(request.form)
-    return render_template("show.html")
+    return render_template("show.html") #assuming this page is made
 
 
 if __name__ == "__main__":
