@@ -24,6 +24,8 @@ def create_friend():
     # Don't forget to redirect after saving to the database.
     return redirect('/')
 
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
