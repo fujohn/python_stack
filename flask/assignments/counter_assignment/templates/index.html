@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='my_style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Counter</title>
+</head>
+<body>
+    <h1 class="bg-primary text-light text-center col-3 my-5 mx-auto">Counter</h1>
+    <h3 class="text-center col-3 my-5 mx-auto">Sight visited {{ session['visited'] }} time(s)</h3>
+    <h3 class="text-center col-3 my-5 mx-auto">Counter increased to {{ session['counter'] }}</h3>
+    <div class="col-3 flex justify-around mx-auto">
+        <form action="/increase_counter" method="post" class="btn btn-primary">
+            <button>Add 1</button>
+        </form>
+
+        <form action="/increase_counter_2" method="post" class="btn btn-primary">
+            <button>Add 2</button>
+        </form>
+
+        <form action="/increase_counter_custom" method="post" class="flex justify-around mx-auto">
+            <label for='custom_increment'>Amount to Add:</label>
+            <input type='text' name='custom_increment'>
+            <button>Add Amount</button>
+        </form>
+
+        <form action="/destroy_session" method="post" class="btn btn-danger">
+            <button>Reset</button>
+        </form>
+    </div>
+</body>
+</html>

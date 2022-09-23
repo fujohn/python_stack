@@ -1,0 +1,30 @@
+input, select {
+    width: 70%;
+}
+
+p {
+    margin: 15px 0px;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+button {
+    width: 50%;
+    background-color: #FFC107;
+    color: black;
+    padding: 5px 20px;
+}
+
+textarea {
+    margin-bottom: 20px;
+}
+
+.multi div {
+    width: 90%;
+}
+
+.multi input {
+    width: 50px;
+}

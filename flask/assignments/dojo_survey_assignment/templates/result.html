@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <title>Dojo Survey Submission</title>
+</head>
+<body>
+    <main class="col-4 offset-md-4 text-center my-5 mx-auto text-light bg-dark p-5">
+        <h1 class="text-start text-info">{{ session['name'] }}</h1>
+        <p class="text-start">Dojo Location: {{ session['location'] }}</p>
+        <p class="text-start">Favorite Language: {{ session['language'] }}</p>
+        <p class="text-start">You enjoy the following:</p>
+        <ul>
+        {% for i in session['ends'] %}
+        <li class="text-start">{{ i }}</li>
+        {% endfor %}
+        </ul>
+        <p class="text-start">Comments: {{ session['comments'] }}</p>
+        <form action="/" method="get"  class="text-start my-2">
+            <button>Home</button>
+        </form>
+    </main>
+</body>
+</html>

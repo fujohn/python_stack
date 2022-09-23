@@ -18,5 +18,26 @@
 </form>
 
 
+
+<h3>Hidden Inputs</h3>
+<form method="post" action="/process">
+    <input type="hidden" name="which_form" value="register">
+    <input type="text" name="first_name">
+    <input type="text" name="last_name">
+    <input type="text" name="email">
+    <input type="password" name="password">
+    <input type="submit" value="Register">
+</form>
+<form method="post" action="/process">
+    <input type="hidden" name="which_form" value="login">
+    <input type="text" name="email">
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+</form>
+<!-- both forms above go to the '/process' route, but because of the hidden value, we can distinguish what was being sent into that path -->
+
+
+
+
 </body>
 </html>
