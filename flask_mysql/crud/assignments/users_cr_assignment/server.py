@@ -24,6 +24,16 @@ def add_user():
     User.save(data)
     return redirect('/')
 
+@app.route('/show/<id>')
+def show_user(id):
+    data = {
+        'id': int(id)
+    }
+    user = User.retrieve_user(data)[0]
+    print(user)
+    return render_template('profile.html', user=user)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

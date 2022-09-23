@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read {{ user.first_name }} {{ user.last_name }}</title>
+</head>
+<body>
+    <header class="col-5 mx-auto d-flex justify-content-around">
+        <h1 class="text-center">{{ user.first_name }} {{ user.last_name }}</h1>
+        <a href="/" >Home</a>
+    </header>
+    <main>
+        <p>Full Name: {{ user.first_name }} {{ user.last_name }}</p>
+        <br>
+        <p>Email: {{ user.email }}</p>
+        <br>
+        <p>Created On: {{ user.created_at }}</p>
+        <br>
+        <p>Last Updated On: {{ user.updated_at }}</p>
+    </main>
+    <footer>
+        <p><a href="/edit">Edit</a> | <a href="/delete">Delete</a></p>
+    </footer>
+</body>
+</html>

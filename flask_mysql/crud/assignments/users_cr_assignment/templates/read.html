@@ -16,6 +16,9 @@
                 <th scope="col">Full Name</th>
                 <th scope="col">Email</th>
                 <th scope="col">Created At</th>
+                <th scope="col">Updated At</th>
+                <th scope="col">Actions</th>
+
             </tr>
         </thead>
         <tbody>
@@ -26,6 +29,8 @@
                 <td>{{ one_user.first_name }} {{ one_user.last_name }}</td>
                 <td>{{ one_user.email }}</td>
                 <td>{{ one_user.created_at }}</td>
+                <td>{{ one_user.updated_at }}</td>
+                <td><a href={{ "/show/"+ one_user.id|string }}>Show</a> | <a href="/edit">Edit</a> | <a href="/delete">Delete</a></td>
             </tr>
             {% endfor %}
         </tbody>

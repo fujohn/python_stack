@@ -31,3 +31,8 @@ class User:
         query = "INSERT INTO users ( first_name , last_name , email, updated_at ) VALUES ( %(first_name)s , %(last_name)s , %(email)s , NOW() );"
         # data is a dictionary that will be passed into the save method from server.py
         return connectToMySQL('users_schema').query_db( query, data )
+
+    @classmethod
+    def retrieve_user(cls, data):
+        query = "SELECT * FROM users WHERE id=%(id)s"
+        return connectToMySQL('users_schema').query_db( query, data )
