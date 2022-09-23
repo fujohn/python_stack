@@ -35,11 +35,8 @@ def create_user():
 
 @app.route('/show')
 def show_user():
-<<<<<<< HEAD
     print("Showing the User Info From the Form")
     print(request.form)
-    return render_template("show.html") #assuming this page is made
-=======
     return render_template('show.html', name_on_template=session['username'], email_on_template=session['useremail'])
 
 # # Session data is also available directly in our templates. That means we can do this:
@@ -56,8 +53,6 @@ def process():
         print('LOGGING IN')
         print(request.form)
     return redirect('/')
->>>>>>> 7abaeca36fd9ab3a8120ad0b2e9bc4a6d9948325
-
 
 if __name__ == "__main__":
     app.run(debug=True)
