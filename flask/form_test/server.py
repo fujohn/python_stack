@@ -1,8 +1,6 @@
 from flask import Flask, render_template, request, redirect, session
 app = Flask(__name__)
-<<<<<<< HEAD
 
-=======
 app.secret_key = 'keep it secret, keep it safe' # set a secret key for session to work
 >>>>>>> 7abaeca36fd9ab3a8120ad0b2e9bc4a6d9948325
 # our index route will handle rendering our form
