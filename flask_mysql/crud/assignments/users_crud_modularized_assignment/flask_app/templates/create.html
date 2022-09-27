@@ -24,8 +24,10 @@
             <input type="text" name="last_name" value={{ user.last_name }}>      
             <label for="email">Email:</label>
             <input type="text" name="email" value={{ user.email }}>
-            <button class="col-3 py-2 my-5 bg-primary text-white rounded border border-success bg-success">Edit User</button>
-            <a href={{ "/show/"+ user.id|string }}>Show User</a>
+            <div class="d-flex">
+                <button class="col-3 py-2 my-5 text-white rounded border border-success bg-success mr-3">Edit User</button>
+                <a href={{ "/show/"+ user.id|string }} class="col-3 py-2 my-5 bg-primary text-white text-center rounded border border-primary bg-primary">Show User</a>
+            </div>
         </form>
     {% else %}
         <div class="col-5 mx-auto d-flex justify-content-around">
