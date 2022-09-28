@@ -41,7 +41,7 @@ def go_to_edit(id):
         'id': id
     }
     user = User.retrieve_user(data)[0]
-    return render_template('create.html', user=user)
+    return render_template('edit_ninja.html', user=user)
 
 @app.route('/edit_user/<int:id>', methods=['POST'])
 def edit_user(id):
@@ -51,7 +51,7 @@ def edit_user(id):
         'last_name': request.form['last_name'],
         'email': request.form['email']
     }
-
+    session.clear()
     User.edit_user(data)
     session.clear()
     return redirect(f'/show/{id}')
