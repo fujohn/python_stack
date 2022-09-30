@@ -3,27 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ninjas.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit {{ ninja.first_name }} {{ ninja.last_name }}</title>
 </head>
 <body>
-    <h1>Edit {{ ninja.first_name }} {{ ninja.last_name }}</h1>
-    <form action="/edit_ninja" method="post">
-        <input type="hidden" name="id" value={{ ninja.id }}>
-        <div id="first_name">
+    <div class="box">
+        <h1>Edit {{ ninja.first_name }} {{ ninja.last_name }}</h1>
+        <form action="/edit_ninja" method="post">
+            <input type="hidden" name="id" value={{ ninja.id }}>
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name" value={{ ninja.first_name }}>
-        </div>
-        <div id="last_name">
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name" value={{ ninja.last_name }}>
-        </div>
-        <div id="age">
             <label for="age">Age:</label>
             <input type="number" name="age" value={{ ninja.age }}>
-        </div>
-        <button>Update Ninja</button>
-    </form>
+            <button>Update Ninja</button>
+        </form>
+    </div>
     <a href="/dojos">Home</a>
 </body>
 </html>

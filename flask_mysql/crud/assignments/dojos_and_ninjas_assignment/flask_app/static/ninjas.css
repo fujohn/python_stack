@@ -1,0 +1,42 @@
+.box, form {
+    background-color: #34393E;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    padding: 5px;
+    margin: 0px auto;
+}
+
+form {
+    background-color: #34393E;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 70%;
+    margin: 0px auto;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #047AFE;
+}
+
+label {
+    color: white;
+    margin: 3px 0px;
+}
+
+button {
+    width: 40%;
+    background-color: #047AFE;
+    border-color: #047AFE;
+}
+
+select, input {
+    width: 100%;
+    margin-bottom: 10px;
+}

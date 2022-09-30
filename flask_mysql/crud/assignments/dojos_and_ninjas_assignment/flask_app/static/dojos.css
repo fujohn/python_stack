@@ -1,0 +1,47 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    background-color: #34393E;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    padding: 5px;
+}
+
+form, #dojo_locations{
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #047AFE;
+}
+
+label {
+    color: white;
+}
+
+#right a {
+    text-decoration: none;
+    color: #DCA91A;
+    text-align: center;
+    margin: 5px auto;
+}
+
+form {
+    width: 80%;
+}
+
+button {
+    width: 30%;
+    background-color: #047AFE;
+    border-color: #047AFE;
+}

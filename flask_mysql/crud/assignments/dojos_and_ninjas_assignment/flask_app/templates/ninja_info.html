@@ -3,34 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='ninjas.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Ninja</title>
 </head>
 <body>
-    <h1>New Ninja</h1>
-    <form action="/create_ninja" method="post">
-        <div id="dojo">
+    <div class="box">
+        <h1>New Ninja</h1>
+        <form action="/create_ninja" method="post">
             <label for="dojo">Dojo:</label>
             <select name="dojo_id">
                 {% for dojo in all_dojos: %}
                     <option value={{ dojo.id }}>{{ dojo.name }}</option>
                 {% endfor %}
             </select>
-        </div>
-        <div id="first_name">
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name">
-        </div>
-        <div id="last_name">
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name">
-        </div>
-        <div id="age">
             <label for="age">Age:</label>
             <input type="number" name="age">
-        </div>
-        <button>Add Ninja</button>
-    </form>
+            <button>Add Ninja</button>
+        </form>
+    </div>
     <a href="/dojos">Home</a>
 </body>
 </html>

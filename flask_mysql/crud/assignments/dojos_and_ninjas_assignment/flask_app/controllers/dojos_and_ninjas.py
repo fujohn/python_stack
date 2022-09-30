@@ -59,7 +59,7 @@ def go_to_edit(id):
         'id':id
     }
     ninja = Ninja.retrieve_ninja(data)[0]
-    return render_template('ninja_info.html', ninja=ninja)
+    return render_template('edit_ninja.html', ninja=ninja)
 
 @app.route('/edit_ninja', methods=['POST'])
 def edit_ninja():
@@ -74,3 +74,12 @@ def edit_ninja():
     ninja = Ninja.retrieve_ninja(data)[0]
     print(ninja)
     return redirect(f'/dojos/{ninja["dojo_id"]}')
+
+@app.route('/delete/<int:id>')
+def delete_user(id):
+    data = {
+        'id': id
+    }
+    dojo_page = Ninja.retrieve_ninja(data)[0]['dojo_id']
+    Ninja.delete_user(data)
+    return redirect(f'/dojos/{dojo_page}')

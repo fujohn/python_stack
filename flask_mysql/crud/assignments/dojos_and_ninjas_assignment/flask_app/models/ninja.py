@@ -30,3 +30,8 @@ class Ninja:
     def edit_user(cls, data):
         query = 'UPDATE ninjas SET first_name = %(first_name)s, last_name = %(last_name)s, age = %(age)s, updated_at = NOW() WHERE id = %(id)s'
         return connectToMySQL('dojos_and_ninjas_schema').query_db( query, data )
+
+    @classmethod
+    def delete_user(cls, data):
+        query = "DELETE FROM ninjas WHERE id=%(id)s"
+        return connectToMySQL('dojos_and_ninjas_schema').query_db( query, data )
