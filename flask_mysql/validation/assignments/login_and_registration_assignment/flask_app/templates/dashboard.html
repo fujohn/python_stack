@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>{{ account.first_name }} {{ account.last_name }}'s Dashboard</title>
 </head>
 <body>
-    <a href="/"><button>Logout</button></a>
+    <h1>Welcome {{ account.first_name }}!!</h1>
+    <a href="/logout"><button>Logout</button></a>
 </body>
 </html>
