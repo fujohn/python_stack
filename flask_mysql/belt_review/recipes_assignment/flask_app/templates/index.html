@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Share</title>
+</head>
+<body>
+    <header>
+        <h1>Recipe Share</h1>
+    </header>
+    <main>
+        <div class="left">
+            <h2>Register</h2>
+            <form action="/register_user" method="POST">
+                <div>
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name">
+                </div>
+                <div>
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="text" name="password">
+                </div>
+                <div>
+                    <label for="password_conf">Confirm Password:</label>
+                    <input type="text" name="password_conf">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div class="right">
+            <h2>Log In</h2>
+            <form action="/login" method="POST">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="text" name="password">
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

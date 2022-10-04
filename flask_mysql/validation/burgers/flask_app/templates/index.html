@@ -40,5 +40,12 @@
         </div>
         <input type="submit" value="Create Burger" class="btn btn-primary btn-outline-dark">
     </form>
+
+    <!-- for tweets -->
+    {% for one_tweet in all_the_tweets %}
+        <h6>{{ one_tweet.creator.name }}</h6> 
+        <a href="/profile/{{ one_tweet.creator.id }}">@{{ one_tweet.creator.handle }}</a>
+        <p>{{ one_tweet.content }}</p>
+    {% endfor %}
 </body>
 </html>

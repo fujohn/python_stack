@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Share</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Share</title>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <h1>Edit Recipe!</h1>
+        </div>
+        <div class="right">
+            <a href="/to_list">Back to Recipes</a>
+            <a href="/logout">Log Out</a>
+        </div>
+    </header>
+    <main>
+        <form action="/add_recipe" method="POST">
+            <div class="left">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" value="test">
+                </div>
+                <div>
+                    <label for="description">Description:</label>
+                    <textarea name="description" id="" cols="30" rows="10">test</textarea>
+                </div>
+                <div>
+                    <label for="instructions">Instructions:</label>
+                    <textarea name="instructions" id="" cols="30" rows="10">test</textarea>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <label for="created_at">Date Cooked/Made:</label>
+                    <input type="date" name="created_at" value="1996-02-12">
+                </div>
+                <div>
+                    <label for="under_thirty">Under 30 Minutes?</label>
+                    <div>
+                        <input type="radio" name="under_thirty" value="Y" checked>
+                        <label for="Y">Yes</label>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="under_thirty" value="N">
+                        <label for="N">No</label>
+                    </div>
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+</html>
+</body>
+</html>
