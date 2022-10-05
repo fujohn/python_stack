@@ -51,23 +51,3 @@ class Dojo:
             dojo.ninjas.append(ninja.Ninja(ninja_data)) # add each ninja in corresponding dojo id
         return dojo
 
-
-    # @classmethod
-    # def show_newest(cls):
-    #     query = 'SELECT MAX(id) FROM users'
-    #     return connectToMySQL('dojos_and_ninjas_schema').query_db(query)
-
-    # @classmethod
-    # def retrieve_user(cls, data):
-    #     query = "SELECT * FROM users WHERE id=%(id)s"
-    #     return connectToMySQL('dojos_and_ninjas_schema').query_db( query, data )
-
-    # @classmethod
-    # def edit_user(cls, data):
-    #     query = 'UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s, updated_at = NOW() WHERE id = %(id)s'
-    #     return connectToMySQL('dojos_and_ninjas_schema').query_db( query, data )
-
-    # @classmethod
-    # def delete_user(cls, data):
-    #     query = "DELETE FROM users WHERE id=%(id)s"
-    #     return connectToMySQL('dojos_and_ninjas_schema').query_db( query, data )

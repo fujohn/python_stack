@@ -1,0 +1,19 @@
+main div {
+    background-color: #B6B6B6;
+    width: 30%;
+    padding: 10px 20px;
+
+}
+
+form div {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.validation {
+    background-color: lightpink;
+    margin-bottom: 10px;
+    width: 90%;
+}

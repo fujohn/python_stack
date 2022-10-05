@@ -1,0 +1,34 @@
+header {
+    width: 90%;
+}
+
+main {
+    width: 70%;
+    margin: 10px auto;
+}
+
+.right div {
+    margin: 10px auto;
+}
+
+.right div div {
+    width: 50%;
+}
+
+.left {
+    width: 50%;
+}
+
+.left div {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.left div label {
+    width: 30%;
+}
+
+.validation {
+    background-color: lightpink;
+    margin-bottom: 10px;
+}

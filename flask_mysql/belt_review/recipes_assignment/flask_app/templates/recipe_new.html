@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='recipe_change.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Recipe Share</title>
 </head>
 <body>
-    <header>
+    <header class="d-flex justify-content-between">
         <div class="left">
             <h1>Add a New Recipe!</h1>
         </div>
@@ -17,36 +19,49 @@
         </div>
     </header>
     <main>
-        <form action="/add_recipe" method="POST">
-            <div class="left">
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" name="name">
+        {% with messages = get_flashed_messages(category_filter=['recipe_entry']) %}
+            {% if messages: %}
+                <div class="validation border border-danger">
+                    {% for message in messages: %}
+                        <p class="text-danger">{{ message }}</p>
+                    {% endfor %}
                 </div>
-                <div>
-                    <label for="description">Description:</label>
-                    <textarea name="description" id="" cols="30" rows="10"></textarea>
-                </div>
-                <div>
-                    <label for="instructions">Instructions:</label>
-                    <textarea name="instructions" id="" cols="30" rows="10"></textarea>
-                </div>
-            </div>
-            <div class="right">
-                <div>
-                    <label for="created_at">Date Cooked/Made:</label>
-                    <input type="date" name="created_at">
-                </div>
-                <div>
-                    <label for="under_thirty">Under 30 Minutes?</label>
+            {% endif %}
+        {% endwith %}
+        <form action="/add_recipe" method="POST" class = "border border-dark" >
+            <div class="questions d-flex justify-content-around align-items-center">
+                <div class="left">
                     <div>
-                        <input type="radio" name="under_thirty" value="Y">
-                        <label for="Y">Yes</label>
+                        <label for="name">Name:</label>
+                        <input type="text" name="name">
                     </div>
-                    
                     <div>
-                        <input type="radio" name="under_thirty" value="N">
-                        <label for="N">No</label>
+                        <label for="description">Description:</label>
+                        <textarea name="description" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div>
+                        <label for="instructions">Instructions:</label>
+                        <textarea name="instructions" id="" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="right">
+                    <div>
+                        <label for="recipe_date">Date Cooked/Made:</label>
+                        <input type="date" name="recipe_date">
+                    </div>
+                    <div class="radio">
+                        <label for="under_thirty">Under 30 Minutes?</label>
+                        <div class="radio_selections d-flex">
+                            <div class="d-flex">
+                                <input type="radio" name="under_thirty" value="Y">
+                                <label for="Y">Yes</label>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <input type="radio" name="under_thirty" value="N">
+                                <label for="N">No</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

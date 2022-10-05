@@ -76,5 +76,5 @@ class Account:
 
     @classmethod
     def save_account(cls, data):
-        query = 'INSERT INTO accounts (first_name, last_name, email, password_hash) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password_hash)s)'
+        query = 'INSERT INTO accounts (first_name, last_name, email, password_hash) VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s)'
         return connectToMySQL('accounts_schema').query_db(query, data)

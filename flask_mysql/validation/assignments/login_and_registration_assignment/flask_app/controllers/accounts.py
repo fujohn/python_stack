@@ -1,4 +1,3 @@
-from xmlrpc.client import UNSUPPORTED_ENCODING
 from flask_app.models.account import Account
 from flask_app import app
 from flask import render_template,redirect,request,session,flash
@@ -7,7 +6,10 @@ bcrypt = Bcrypt(app)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    if 'account_id' in session:
+        return render_template('/dashboard')
+    else:
+        return render_template('index.html')
 
 @app.route('/dashboard')
 def dashboard():
