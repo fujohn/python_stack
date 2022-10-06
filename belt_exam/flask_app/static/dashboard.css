@@ -1,0 +1,15 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: #15A2B8;
+    color: white;
+    border-color: #15A2B8;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
