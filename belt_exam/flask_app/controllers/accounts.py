@@ -13,9 +13,12 @@ def index():
 
 @app.route('/dashboard')
 def dashboard():
-    data = {'id': session['account_id']}
-    account = Account.get_by_id(data)
-    return render_template('dashboard.html', account = account)
+    if 'account_id' in session:
+        data = {'id': session['account_id']}
+        account = Account.get_by_id(data)
+        return render_template('dashboard.html', account = account)
+    else:
+        return redirect('/')
 
 @app.route('/register_account', methods=['POST'])
 def register_account():
@@ -53,7 +56,7 @@ def login():
         session['login_failed'] = True
         return redirect('/')
     session['account_id'] = account_in_db.id
-    return redirect('dashboard')
+    return redirect('/dashboard')
 
 @app.route('/logout')
 def logout():

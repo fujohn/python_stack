@@ -1,4 +1,4 @@
-# from flask_app.controllers import accounts
+from flask_app.controllers import accounts
 from flask_app import app
 
 
