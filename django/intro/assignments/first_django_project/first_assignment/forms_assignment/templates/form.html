@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <form action="/forms/save" method="post">
+        {% csrf_token %}
+        Your Name: <input type='text' name='name'>
+        Dojo Location: <input type='text' name='dojo'>
+        Favorite Language: <input type='text' name='language'>
+        Comment: <textarea type='text' name='comment'></textarea>
+        <button type='submit'>Button</button>
+    </form>
+</body>
+</html>

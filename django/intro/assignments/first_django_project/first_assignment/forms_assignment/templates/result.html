@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <h1>Submitted Info</h1>
+    <p>Name: {{request.session.name}}</p>
+    <p>Dojo Location: {{request.session.dojo}}</p>
+    <p>Favorite Language: {{request.session.language}}</p>
+    <p>Comment: {{request.session.comment}}</p>
+    <a href="/forms">Go Back</a>
+</body>
+</html>

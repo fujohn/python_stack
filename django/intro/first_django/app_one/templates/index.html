@@ -20,5 +20,14 @@
     {% endfor %}
     </ul>
     <img src="{% static 'images/image.jpg' %}" />
+
+    <h3>Create a User</h3>
+    <form action='/users' method='post'>
+        {% csrf_token %}
+        Name: <input type='text' name='name'>
+        Email: <input type='text' name='email'>
+        <button type='submit'>Create User</button>
+    </form>
+
 </body>
 </html>
