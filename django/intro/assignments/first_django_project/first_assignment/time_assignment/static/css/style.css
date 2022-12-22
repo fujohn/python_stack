@@ -1,0 +1,9 @@
+body {
+    width: 60%;
+    margin: 0px auto;
+}
+
+p, h2 {
+    border: 1px solid black;
+    text-align: center;
+}
