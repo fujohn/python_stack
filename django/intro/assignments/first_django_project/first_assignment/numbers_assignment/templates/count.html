@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1>Counter</h1>
+    <h2>Counter at {{ request.session.counter }}</h2>
+    <h2>Visited {{ request.session.visited }} times</h2>
+    <a href="/numbers/destroy_session"><button>Reset</button></a>
+    <a href="/numbers/double"><button>+ 2</button></a>
+
+    <form action="/numbers/custom_add" method="post">
+        {% csrf_token %}
+        Pick a number to add: <input type="text" name="count">
+        <button type='submit'>Add</button>
+    </form>
+</body>
+</html>

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blogs',
     'time_assignment',
     'forms_assignment',
+    'numbers_assignment',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
