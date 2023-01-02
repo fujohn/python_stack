@@ -7,7 +7,7 @@
     <title>Update</title>
 </head>
 <body>
-    <h1>Edit Show</h1>
+    <h1>Edit Show ({{ show.title }})</h1>
     <form action="/shows/{{ show.id }}/update/" method="post">
         {% csrf_token %}
         <label for="title">Title</label>
