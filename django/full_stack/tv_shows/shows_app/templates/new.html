@@ -8,6 +8,15 @@
 </head>
 <body>
     <h1>Add a New Show</h1>
+    
+    {% if messages %}
+    <ul class="messages">    
+        {% for message in messages %}    
+            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+        {% endfor %}
+    </ul>
+    {% endif %}
+
     <form action="/shows/create/" method="post">
         {% csrf_token %}
         <label for="title">Title</label>
